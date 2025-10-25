@@ -1,0 +1,238 @@
+.about-wrapper{
+  .position-slider{
+    left: -3rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .min-h{
+    min-height: 300px;
+  }
+  .content {
+    .subtitle {
+      line-height: 144%;
+      letter-spacing: 0.84px;
+      @media (max-width: 992px) {
+        letter-spacing: 0.6px;
+      }
+    }
+
+    h2 {
+      line-height: 110%;
+      letter-spacing: -0.52px;
+      @media (max-width: 992px) {
+        line-height: normal;
+        letter-spacing: -0.32px;
+      }
+    }
+    p{
+      font-size: 20px;
+      line-height: 1.4;
+      letter-spacing: 0.4px;
+      @media (max-width: 992px) {
+        font-size: 18px;
+        line-height: 1.4;
+        letter-spacing: 0.4px;
+      }
+    }
+  }
+}
+
+
+
+
+
+.why-choose-us {
+  overflow: hidden;
+  @media (min-width: 992px) {
+    .col-lg-3 {
+      flex: 0 0 auto;
+      width: 28% !important;
+    }
+  }
+
+  .content {
+    .subtitle {
+      line-height: 144%;
+      letter-spacing: 0.84px;
+      @media (max-width: 992px) {
+        letter-spacing: 0.6px;
+      }
+    }
+
+    h2 {
+      line-height: 110%;
+      letter-spacing: -0.52px;
+      @media (max-width: 992px) {
+        line-height: normal;
+        letter-spacing: -0.32px;
+      }
+    }
+
+    p{
+      font-size: 20px;
+      line-height: 1.4;
+      letter-spacing: 0.4px;
+      @media (max-width: 992px) {
+        font-size: 18px;
+        line-height: 1.4;
+        letter-spacing: 0.4px;
+      }
+    }
+  }
+
+  .content-card {
+    will-change: transform, opacity;
+    @media (max-width: 992px) {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid map-get($theme-colors, "secondary-800");
+    }
+    //&:last-child{
+    //  border: unset !important;
+    //}
+
+    h3 {
+      line-height: 32px;
+      letter-spacing: -0.2px;
+    }
+
+    p{
+      font-size: 20px;
+      line-height: 1.4;
+      letter-spacing: 0.4px;
+      @media (max-width: 992px) {
+        font-size: 18px;
+        line-height: 1.4;
+        letter-spacing: 0.4px;
+      }
+    }
+  }
+  .image{
+    img{
+      will-change: transform, opacity;
+    }
+  }
+
+  .btn-primary {
+    @media (max-width: 992px) {
+      width: 100% !important;
+      font-weight: 400 !important;
+      letter-spacing: -0.35px !important;
+    }
+  }
+}
+.our-mission-vission{
+  .content {
+    .subtitle {
+      line-height: 144%;
+      letter-spacing: 0.84px;
+      @media (max-width: 992px) {
+        letter-spacing: 0.6px;
+      }
+    }
+
+    h2 {
+      line-height: 110%;
+      letter-spacing: -0.52px;
+      @media (max-width: 992px) {
+        line-height: normal;
+        letter-spacing: -0.32px;
+      }
+    }
+
+    p{
+      font-size: 20px;
+      line-height: 1.4;
+      letter-spacing: 0.4px;
+      @media (max-width: 992px) {
+        font-size: 18px;
+        line-height: 1.4;
+        letter-spacing: 0.4px;
+      }
+    }
+  }
+}
+.faqs{
+  .content {
+    .subtitle {
+      line-height: 144%;
+      letter-spacing: 0.84px;
+      @media (max-width: 992px) {
+        letter-spacing: 0.6px;
+      }
+    }
+
+    h2 {
+      line-height: 110%;
+      letter-spacing: -0.52px;
+      @media (max-width: 992px) {
+        line-height: normal;
+        letter-spacing: -0.32px;
+      }
+    }
+
+    p{
+      font-size: 20px;
+      line-height: 1.4;
+      letter-spacing: 0.4px;
+      @media (max-width: 992px) {
+        font-size: 18px;
+        line-height: 1.4;
+        letter-spacing: 0.4px;
+      }
+    }
+  }
+  .accordion{
+    .accordion-item{
+      background: unset !important;
+      background: unset !important;
+      border-top: unset !important;
+      border-right: unset !important;
+      border-left: unset !important;
+      &:last-child{
+        border-bottom: unset !important;
+      }
+      .accordion-button{
+        line-height: 28px;
+        padding-left:0 !important;
+        padding-right:0 !important;
+        box-shadow: unset !important;
+        background: unset !important;
+        font-size: 20px !important;
+        @media (max-width: 992px) {
+          font-size: 16px !important;
+        }
+        &:after{
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M21 12C21 12.1989 20.921 12.3897 20.7803 12.5303C20.6397 12.671 20.4489 12.75 20.25 12.75H12.75V20.25C12.75 20.4489 12.671 20.6397 12.5303 20.7803C12.3897 20.921 12.1989 21 12 21C11.8011 21 11.6103 20.921 11.4697 20.7803C11.329 20.6397 11.25 20.4489 11.25 20.25V12.75H3.75C3.55109 12.75 3.36032 12.671 3.21967 12.5303C3.07902 12.3897 3 12.1989 3 12C3 11.8011 3.07902 11.6103 3.21967 11.4697C3.36032 11.329 3.55109 11.25 3.75 11.25H11.25V3.75C11.25 3.55109 11.329 3.36032 11.4697 3.21967C11.6103 3.07902 11.8011 3 12 3C12.1989 3 12.3897 3.07902 12.5303 3.21967C12.671 3.36032 12.75 3.55109 12.75 3.75V11.25H20.25C20.4489 11.25 20.6397 11.329 20.7803 11.4697C20.921 11.6103 21 11.8011 21 12Z' fill='%23171717'/%3E%3C/svg%3E");
+        }
+        &:not(.collapsed){
+          box-shadow: unset !important;
+          background: unset !important;
+          &:after{
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M21 12C21 12.1989 20.921 12.3897 20.7803 12.5303C20.6397 12.671 20.4489 12.75 20.25 12.75H3.75C3.55109 12.75 3.36032 12.671 3.21967 12.5303C3.07902 12.3897 3 12.1989 3 12C3 11.8011 3.07902 11.6103 3.21967 11.4697C3.36032 11.329 3.55109 11.25 3.75 11.25H20.25C20.4489 11.25 20.6397 11.329 20.7803 11.4697C20.921 11.6103 21 11.8011 21 12Z' fill='%23171717'/%3E%3C/svg%3E") !important;
+          }
+        }
+
+
+      }
+    }
+    .accordion-body{
+      padding-left:0 !important;
+      padding-right:0 !important;
+      p{
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+  }
+  .toggle-more-accordion{
+    display: none;
+  }
+  .btn-outline-primary{
+    @media (max-width: 992px) {
+      width: 100%;
+      font-weight: 400 !important;
+    }
+  }
+
+}
