@@ -1,0 +1,497 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+// Color variables
+$body-bg: #FBF8F3;
+
+$primary-dark: #245F63;
+$primary-dark-100: #177368;
+$primary-dark-200: #0C6142;
+$primary: #0D7E55;
+$primary-100: #8CC8AB;
+$primary-200: #C7DCCB;
+$primary-300: #D9E5D7;
+$primary-400: #E2F0E5;
+$primary-500: #E1EDE2;
+
+
+
+$secondary-dark: #CE9379;
+$secondary: #EA7E57;
+$secondary-100: #D5A694;
+$secondary-200: #DBD4C2;
+$secondary-300: #D3CEBF;
+$secondary-400: #847E6F;
+$secondary-500: #827D70;
+$secondary-600: #B7B3A5;
+$secondary-700: #E4DED1;
+$secondary-800: #DFD5BC;
+$secondary-900: #E5E0D6;
+$secondary-1000: #8C462F;
+$gradient:linear-gradient(98deg, #8C462F 3.25%, #F5C1AC 77.85%, #B35B3D 97.98%);
+
+
+$dark-blue: #1C3647;
+$dark-blue-100: #19363F;
+$accent: #EED4AF;
+$accent-100: #EDEAE1;
+$accent-200: #CEC6C3;
+$accent-300: #EFDBCE;
+$accent-400: #E6DFD1;
+$accent-500: #C2BBB5;
+$accent-600: #ECE8DF;
+$accent-700: #EBE6D8;
+$accent-800: #CCC3B1;
+$accent-900: #FFFAF0;
+
+
+$light: #FAF7F0;
+$light-100: #F5F2EC;
+$light-200: #C7C7C2;
+$light-300: #F2EFE6;
+$light-400: #F8F7F4;
+$light-500: #FEFEFD;
+$light-600: #F4F1EB;
+$light-700: #E9E9E9;
+$light-800: #F5F2ED;
+$light-900: #E9E2D4;
+
+$dark: #323534;
+$dark-101: #0C120C;
+$dark-100: #424848;
+$dark-200: #5B5F5C;
+$dark-300: #73706B;
+$dark-400: #C7C7C2;
+$dark-500: #4D524D;
+$dark-600: #7B807C;
+$dark-700: #252D2C;
+$dark-800: #636374;
+$dark-900: #323232;
+$dark-1000: #8E8579;
+$dark-1100: #333333;
+
+
+
+$grey: #727874;
+$grey-100: #737373;
+$grey-200: #5E5E5E;
+$grey-300: #7B7F7C;
+$grey-400: #D7D9D6;
+// marquee bg color
+$grey-500: #EAE5D9;
+
+$danger: #EA4E16;
+
+
+$zinc: #2C9BB6;
+$border-color-1: rgba(216, 192, 142, 0.22);
+
+// Custom colors
+$custom-colors: (
+        "body-bg": $body-bg,
+
+        "primary-dark": $primary-dark,
+        "primary-dark-100": $primary-dark-100,
+        "primary-dark-200": $primary-dark-200,
+        "primary": $primary,
+        "primary-100": $primary-100,
+        "primary-200": $primary-200,
+        "primary-300": $primary-300,
+        "primary-400": $primary-400,
+        "primary-500": $primary-500,
+
+        "secondary-dark": $secondary-dark,
+        "secondary": $secondary,
+        "secondary-100": $secondary-100,
+        "secondary-200": $secondary-200,
+        "secondary-300": $secondary-300,
+        "secondary-400": $secondary-400,
+        "secondary-500": $secondary-500,
+        "secondary-600": $secondary-600,
+        "secondary-700": $secondary-700,
+        "secondary-800": $secondary-800,
+        "secondary-900": $secondary-900,
+        "secondary-1000": $secondary-1000,
+
+        "dark-blue": $dark-blue,
+        "dark-blue-100": $dark-blue-100,
+        "accent": $accent,
+        "accent-100": $accent-100,
+        "accent-200": $accent-200,
+        "accent-300": $accent-300,
+        "accent-400": $accent-400,
+        "accent-500": $accent-500,
+        "accent-600": $accent-600,
+        "accent-700": $accent-700,
+        "accent-800": $accent-800,
+        "accent-900": $accent-900,
+
+        "light": $light,
+        "light-100": $light-100,
+        "light-200": $light-200,
+        "light-300": $light-300,
+        "light-400": $light-400,
+        "light-500": $light-500,
+        "light-600": $light-600,
+        "light-700": $light-700,
+        "light-800": $light-800,
+        "light-900": $light-900,
+
+        "dark": $dark,
+        "dark-100": $dark-100,
+        "dark-101": $dark-101,
+        "dark-200": $dark-200,
+        "dark-300": $dark-300,
+        "dark-400": $dark-400,
+        "dark-500": $dark-500,
+        "dark-600": $dark-600,
+        "dark-700": $dark-700,
+        "dark-800": $dark-800,
+        "dark-900": $dark-900,
+        "dark-1000": $dark-1000,
+        "dark-1100": $dark-1100,
+
+        "zinc": $zinc,
+        "border-color-1": $border-color-1,
+
+
+        "grey":$grey ,
+        "grey-100":$grey-100,
+        "grey-200":$grey-200,
+        "grey-300":$grey-300,
+        "grey-400":$grey-400,
+        "grey-500":$grey-500,
+
+
+        "danger":$danger,
+);
+
+
+// Custom spacers
+$custom-spacers: (
+        1: 0.25rem, // 4px
+        2: 0.5rem, // 8px
+        3: 1rem, // 16px
+        4: 1.5rem, // 24px
+        5: 2rem, // 32px
+        6: 2.5rem, // 40px
+        7: 3rem, // 48px
+        8: 3.5rem, // 56px
+        9: 4rem, // 64px
+        10: 4.5rem, // 72px
+        11: 5rem, // 80px
+        12: 5.5rem, // 88px
+        13: 6rem, // 96px
+        14: 6.5rem, // 104px
+        15: 7rem, // 112px
+        16: 7.5rem, // 120px
+        17: 8rem, // 128px
+        18: 8.5rem, // 136px
+        19: 9rem, // 144px
+        20: 9.5rem, // 152px
+        21: 10rem // 160px
+);
+body , html{
+  overflow-x: hidden !important;
+}
+@font-face {
+  font-family: headline;
+  src: url("../fonts/test-tiempos-headline.otf");
+}
+
+@font-face {
+  font-family: headline-italic;
+  src: url("../fonts/test-tiempos-headline-italic.otf");
+}
+@font-face {
+  font-family: proximanova;
+  src: url("../fonts/proximanova.ttf");
+}
+@font-face {
+  font-family: test-tiempos-fine-light;
+  src: url("../fonts/test-tiempos-fine-light.otf");
+}
+.font-proximanova{
+  font-family: proximanova;
+}
+
+// Merge theme colors BEFORE bootstrap import
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// Merge spacers BEFORE bootstrap import
+$spacers: map-merge($spacers, $custom-spacers);
+
+// Bootstrap Core
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Merge utilities AFTER bootstrap core
+$utilities: map-merge(
+                $utilities,
+                (
+                        "background-color": map-merge(
+                                        map-get($utilities, "background-color"),
+                                        (
+                                                values: $theme-colors
+                                        )
+                        ),
+                        "color": map-merge(
+                                        map-get($utilities, "color"),
+                                        (
+                                                values: $theme-colors
+                                        )
+                        )
+                )
+);
+
+// Bootstrap Utilities API
+@import "../../node_modules/bootstrap/scss/utilities/api";
+// Replace your existing custom rounded classes with this
+$rounded-sizes: (
+        0: 0, // Add 0 value
+        1: 4px,
+        2: 10px,
+        3: 12px,
+        4: 16px,
+        5: 20px,
+        6: 24px,
+        7: 28px,
+        8: 30px,
+        9: 36px
+);
+
+// Base classes
+@each $key, $value in $rounded-sizes {
+  .rounded-#{$key} {
+    border-radius: $value !important;
+  }
+  .rounded-start-#{$key} {
+    border-top-left-radius: $value !important;
+    border-bottom-left-radius: $value !important;
+  }
+  .rounded-end-#{$key} {
+    border-top-right-radius: $value !important;
+    border-bottom-right-radius: $value !important;
+  }
+  .rounded-top-#{$key} {
+    border-top-left-radius: $value !important;
+    border-top-right-radius: $value !important;
+  }
+  .rounded-bottom-#{$key} {
+    border-bottom-left-radius: $value !important;
+    border-bottom-right-radius: $value !important;
+  }
+}
+
+// Responsive variants
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @if $breakpoint != xs {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+      @each $key, $value in $rounded-sizes {
+        .rounded#{$infix}-#{$key} {
+          border-radius: $value !important;
+        }
+        .rounded-start#{$infix}-#{$key} {
+          border-top-left-radius: $value !important;
+          border-bottom-left-radius: $value !important;
+        }
+        .rounded-end#{$infix}-#{$key} {
+          border-top-right-radius: $value !important;
+          border-bottom-right-radius: $value !important;
+        }
+        .rounded-top#{$infix}-#{$key} {
+          border-top-left-radius: $value !important;
+          border-top-right-radius: $value !important;
+        }
+        .rounded-bottom#{$infix}-#{$key} {
+          border-bottom-left-radius: $value !important;
+          border-bottom-right-radius: $value !important;
+        }
+      }
+    }
+  }
+}
+.font-headline {
+  font-family: headline;
+}
+
+.font-headline-italic {
+  font-family: headline-italic;
+}
+
+.font-geist {
+  font-family: "Geist", sans-serif;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+.test-tiempos-fine-light{
+  font-family: test-tiempos-fine-light;
+}
+
+@import "./navbar";
+@import "./landing";
+@import "./buttons";
+@import "./footer";
+@import "./about-page";
+@import "./service_page";
+@import "./contact_page";
+
+// Hero Slider Styles
+.heroSwiper {
+  height: 400px;
+  padding: 20px 0;
+  
+  .swiper-slide {
+    width: 300px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    
+    &.swiper-slide-active {
+      transform: scale(1.05);
+      z-index: 2;
+      
+      .slide-content {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        border: 2px solid $primary;
+      }
+    }
+    
+    .slide-content {
+      background: white;
+      border-radius: 16px;
+      padding: 30px 20px;
+      height: 100%;
+      width: 100%;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      
+      .placeholder-image {
+        transition: all 0.3s ease;
+      }
+      
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      
+      p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+    }
+  }
+  
+  // Navigation buttons
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: $primary;
+    background: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    
+    &:after {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    
+    &:hover {
+      background: $primary;
+      color: white;
+      transform: scale(1.1);
+    }
+  }
+  
+  .swiper-button-next {
+    right: 10px;
+  }
+  
+  .swiper-button-prev {
+    left: 10px;
+  }
+  
+  // Pagination
+  .swiper-pagination {
+    bottom: 0;
+    
+    .swiper-pagination-bullet {
+      background: $dark-200;
+      opacity: 0.5;
+      width: 12px;
+      height: 12px;
+      margin: 0 6px;
+      transition: all 0.3s ease;
+      
+      &.swiper-pagination-bullet-active {
+        background: $primary;
+        opacity: 1;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .heroSwiper {
+    height: 350px;
+    padding: 15px 0;
+    
+    .swiper-slide {
+      width: 280px;
+      height: 320px;
+      
+      .slide-content {
+        padding: 25px 15px;
+        
+        h3 {
+          font-size: 1.3rem;
+        }
+        
+        p {
+          font-size: 0.9rem;
+        }
+      }
+    }
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 40px;
+      height: 40px;
+      
+      &:after {
+        font-size: 14px;
+      }
+    }
+  }
+}
+.list-group-item-action:not(.active):hover, .list-group-item-action:not(.active):focus{
+  background: unset !important;
+}
+.dropdown-item.active, .dropdown-item:active{
+  background: unset !important;
+}
+.dropdown-toggle::after{
+  border-top: 0px solid $secondary-1000 !important;
+  margin-left:0 !important;
+}
+.offcanvas.offcanvas-start{
+  z-index: 99999 !important;
+}
+.list-group-item.active{
+  background:$secondary-1000 !important;
+  border-color: $secondary-1000 !important;
+}
+.btn:disabled, .btn.disabled, fieldset:disabled .btn{
+  background:$secondary-1000 !important;
+  border-color: $secondary-1000 !important;
+}

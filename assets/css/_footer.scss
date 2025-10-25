@@ -1,0 +1,54 @@
+footer{
+.footer-wrapper{
+  .company{
+    .nav-logo {
+      max-width: 200px !important;
+      height: auto;
+      @media (max-width: 430px) {
+        max-width: 160px !important;
+      }
+    }
+  }
+  .border-top{
+    border-color: rgba(216, 192, 142, 0.22) !important;
+  }
+  .quick-links{
+    ul{
+      li{
+        a{
+          &:hover{
+            text-decoration: underline !important;
+            color: $secondary !important;
+            text-underline-offset: 3px !important;
+          }
+        }
+      }
+    }
+  }
+  p{
+    a{
+      &.size{
+        font-size: 14px !important;
+      }
+
+    }
+  }
+  
+}
+  .hover{
+    color:#fff !important;
+  }
+.whatsapp-link{
+  a{
+    svg{
+      width: 50px;
+      height: 50px;
+      min-width: 50px;
+      min-height: 50px;
+    }
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}
+}

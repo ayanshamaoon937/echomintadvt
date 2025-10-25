@@ -1,0 +1,255 @@
+.navbar {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1050;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  .navbar-brand{
+    &:focus-visible , &:focus{
+      box-shadow: unset;
+      outline: unset;
+      border:unset;
+    }
+  }
+  .navbar-collapse {
+    @media (max-width: 991px) {
+      margin-top: 25px;
+    }
+  }
+
+  .container {
+    @media (max-width: 992px) {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    .nav-logo {
+      max-width: 200px !important;
+      height: auto;
+      @media (max-width: 430px) {
+        max-width: 160px !important;
+      }
+    }
+  }
+
+  .nav-link {
+    line-height: 24px;
+    position: relative;
+    transition: color 0.3s ease;
+
+    @media (max-width: 992px) {
+      color: map-get($theme-colors, "dark-100") !important;
+    }
+
+    &.active {
+      color: $secondary-1000 !important;
+      font-weight: 600;
+      
+      // Add underline effect for desktop
+      @media (min-width: 993px) {
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: $secondary-1000 !important;
+          border-radius: 1px;
+        }
+      }
+    }
+
+    // Hover effect for non-active links
+    &:not(.active):hover {
+      color: $secondary-1000 !important;
+    }
+
+    // Chevron icon styles
+    .chevron-icon {
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+    }
+  }
+
+  .navbar-nav {
+    grid-gap: 40px;
+
+    .nav-item {
+      @media (max-width: 992px) {
+        border-top: 1px solid map-get($theme-colors, "light-700");
+        padding: 25px 0;
+        font-weight: 600 !important;
+      }
+    }
+
+    @media (max-width: 992px) {
+      grid-gap: 0 !important;
+    }
+  }
+
+  @media (max-width: 992px) {
+    position: fixed;
+    background-color: map-get($theme-colors, "body-bg");
+    padding: 26px 20px !important;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .navbar-toggler {
+    border: unset !important;
+    padding: unset !important;
+    &:focus-visible,
+    &:focus {
+      box-shadow: unset !important;
+      outline: unset !important;
+      border: unset !important;
+    }
+  }
+
+  &.sticky {
+    position: fixed;
+    background-color: $body-bg;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+
+// Mega menu styles
+  .dropdown-mega{
+    position: static;
+    .dropdown-menu{
+      position: absolute;
+      top: calc(100% - 0px);
+      left: 1rem;
+      right: 1rem;
+      margin-top: 0;
+      z-index: 1060;
+      border: 1px solid map-get($theme-colors , "light-700");
+      background: map-get($theme-colors , "body-bg");
+      backdrop-filter: blur(8px);
+    }
+  }
+
+  .mega-menu{
+    .dropdown-item{
+      padding: 6px 0;
+      color: map-get($theme-colors , "dark-100");
+      font-weight: 500;
+      transition: color 0.3s ease;
+      
+      &:hover{
+        color: map-get($theme-colors , "secondary-1000");
+        background-color: transparent;
+        text-decoration: underline;
+      }
+      
+      &.active{
+        color:  $secondary-1000 !important;
+        font-weight: 600;
+        text-decoration: underline;
+      }
+    }
+    h6{
+      font-weight: 600;
+      letter-spacing: .02em;
+    }
+  }
+ 
+  // Desktop hover open - controlled by JavaScript
+  @media (min-width: 992px){
+    .dropdown-mega .dropdown-menu{
+      display: none; // Hidden by default, shown by JavaScript
+      transition: opacity 0.2s ease-in-out;
+      opacity: 0;
+    }
+    
+    .dropdown-mega .dropdown-menu.show{
+      display: block !important;
+      opacity: 1;
+    }
+    
+    // Rotate chevron when dropdown is shown or on hover
+    .dropdown-mega:hover .chevron-icon,
+    .dropdown-mega.show .chevron-icon,
+    .dropdown-mega .dropdown-toggle.show .chevron-icon {
+      transform: rotate(180deg);
+    }
+    
+    .navbar-expand-lg .navbar-nav .dropdown-menu{
+      position: absolute;
+      right: 1rem !important;
+      left: 1rem !important;
+      width: 100vw;
+      margin-left: calc((100vw - 100%) / -2); // stretch to viewport from container
+      margin-right: calc((100vw - 100%) / -2);
+      border-left: 0;
+      border-right: 0;
+    }
+  }
+  
+  // Mobile/Tablet: keep default dropdown behavior within collapse
+  @media (max-width: 991.98px){
+    .dropdown-mega{
+      .dropdown-menu{
+        display: none !important; // hidden in mobile; use offcanvas instead
+      }
+      .mega-menu .dropdown-item{
+        padding: .5rem 0;
+      }
+    }
+    .offcanvas{
+      width: 300px;
+    }
+    .offcanvas .list-group-item{
+      border: 0;
+      padding-left: 0;
+      padding-right: 0;
+      transition: all 0.3s ease;
+      
+      &.active{
+        background-color: rgba(map-get($theme-colors, "primary"), 0.1) !important;
+        color:  $secondary-1000 !important;
+        font-weight: 600;
+        border-left: 3px solid  $secondary-1000 !important;
+        padding-left: 12px !important;
+      }
+      
+      &:hover:not(.active){
+        background-color: rgba(map-get($theme-colors, "primary"), 0.05) !important;
+        color:  $secondary-1000 !important;
+      }
+    }
+    .offcanvas .collapse .list-group-item{
+      padding-left: .5rem;
+      
+      &.active{
+        padding-left: 15px !important;
+      }
+    }
+  }
+
+}
+.offcanvas{
+  z-index: 1045; // Use Bootstrap's default z-index
+}
+
+// Ensure hamburger button is clickable
+.navbar-toggler {
+  z-index: 1051;
+  position: relative;
+  
+  &:focus {
+    box-shadow: none !important;
+    outline: none !important;
+  }
+}
+
+// Prevent body scrolling when offcanvas is open
+body.offcanvas-open {
+  overflow: hidden !important;
+  position: fixed !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
